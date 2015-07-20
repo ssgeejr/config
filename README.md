@@ -8,13 +8,10 @@ File location: $HOME/.pypirc
 File location: ~/.pip/pip.conf
 
 ##How to Compile and Install Python 3 for static deployments (CentOS)
-```
-if [ "$HOME" == "" ]; then
-  echo "Home variable not set ... "
-else
-  echo "Using \$HOME varaible [$HOME]" 
-fi
 
+**Make sure your $HOME variable is set**
+*or use the install script*
+```
 yum groupinstall -y "Development Tools"
 yum install -y openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel
 wget http://python.org/ftp/python/3.3.2/Python-3.3.2.tar.bz2
