@@ -7,7 +7,7 @@ Using a private pypi repository
 File location: $HOME/.pypirc
 File location: ~/.pip/pip.conf
 
-##How to Compile and Install Python 3 for static deployments (CentOS)
+####How to Compile and Install Python 3 for static deployments (CentOS)
 
 **Make sure your $HOME variable is set**
 *or use the install script*
