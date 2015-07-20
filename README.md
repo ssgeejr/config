@@ -22,3 +22,4 @@ mkdir -p ~/.local
 make altinstall prefix=$HOME/.local exec-prefix=$HOME/.local
 ```
 
+finally, run `enable_python_3`
