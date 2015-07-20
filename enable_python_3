@@ -1,0 +1,25 @@
+#!/bin/bash
+#Modify your $PATH
+cd ~/.local/bin
+pv=0
+read -p "Overload python (y) or use python3 (n)? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   ln -s python3.3 python
+   ln -s pyvenv-3.3 pyvenv
+   sed -i "1c\#\!${HOME}/.local/bin/python3.3" pyvenv-3.3
+   pv=1
+else
+   ln -s python3.3 python3
+fi
+
+
+echo "export PATH=\$HOME/.local/bin:\$PATH" >> ~/.bashrc
+. ~/.bashrc
+
+echo "python is now mapped to [`which python`]"
+
+if [ $pv == "1" ]; then
+   echo "pyvenv is now mapped to [`which pyvenv`]"
+fi
