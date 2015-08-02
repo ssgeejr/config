@@ -1,0 +1,12 @@
+Host *
+    StrictHostKeyChecking no
+	
+Host github.com
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/your_private_key
+	
+Host your-public-dns.amazonaws.com
+    User git
+    IdentityFile ~/.ssh/your_private_key
+	
