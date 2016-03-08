@@ -1,0 +1,31 @@
+[alias]
+  a   = add
+  br  = branch
+  ci  = commit
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f "
+  cl  = clone
+  co  = checkout
+  cp  = cherry-pick
+  d   = "!f() { git diff --color "$1"^.."$1"; }; f"
+  dlc = diff --cached HEAD^
+  i   = init
+  gr  = log --graph --color --pretty=format:"%C(yellow)%h\\ %Cgreen%cr\\%Cred%d\\ %Creset%s%Cblue\\ [%cn]"
+  le  = log --oneline --decorate
+  ll  = log --pretty=format:"%C(yellow)%h\\ %Cgreen%cr\\%Cred%d\\ %Creset%s\\ %Cblue\\ [%cn]" --decorate --numstat
+  ls  = log --pretty=format:"%C(yellow)%h\\ %Cgreen%cr\\%Cred%d\\ %Creset%s\\ %Cblue\\ [%cn]" --decorate
+  s   = status --branch --short
+  pulled = log --reverse --no-merges --stat @{1}..
+  rdiff = diff --name-only --stat origin/master..HEAD 
+[color]
+  ui = auto
+[core]
+  fileMode = true
+[credential]
+  helper = store
+[fetch]
+  prune = true
+[push]
+  default = current
+[user]
+  name = <user-name>
+  email = <email-address>
