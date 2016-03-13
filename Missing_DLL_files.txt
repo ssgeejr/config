@@ -1,0 +1,13 @@
+For gaming and some linux -> windows ... 
+
+Missing DLL: MSVCP140.dll
+https://www.visualstudio.com/downloads/download-visual-studio-vs
+download both - usually you only need the 32 bit driver
+
+Microsoft Visual C++ 2015 Redistributable
+
+
+
+
+
+
