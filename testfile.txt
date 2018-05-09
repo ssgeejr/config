@@ -1,0 +1,10 @@
+https://github.com/ssgeejr/config.git
+
+This file is to test the SSH keys located in the file: .config in the folder %USERPROFILE%\.ssh\
+
+
+
+host github.com
+ HostName github.com
+ IdentityFile %USERPROFILE%\.ssh\sgee_sprint
+ User git
