@@ -1,0 +1,4 @@
+set GIT_TRACE=2
+set GIT_CURL_VERBOSE=2
+set GCM_TRACE=1
+git push
